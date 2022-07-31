@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductCard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #root {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 15px;
+        background-color: #bcbaba;
+      }
+      #card {
+        background: #fff;
+        margin: 20px auto;
+
+        width: 250px;
+        line-height: 25px;
+      }
+      #card h3 {
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      #card h3,
+      #card p {
+        margin-left: 5px;
+      }
+      #card p:nth-child(3) {
+        line-height: 15px;
+        margin-bottom: 20px;
+      }
+      #card img {
+        width: 100%;
+        height: 180px;
+        cursor: pointer;
+      }
+      .color {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        margin-bottom: 20px;
+      }
+      .color button {
+        background-color: transparent;
+        border-radius: 20px;
+        padding: 2px 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="root">
+      <div id="card">
+        <img
+          src="https://cdn.vox-cdn.com/thumbor/EeQpOMN1j5f3Qmvo1oanEoByZzY=/1400x1050/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/20030737/xWZMNYm.png"
+        />
+        <h3>PlayStation 5</h3>
+        <p>
+          Nest generation PlayStation from Sony packing the atest AMD Zen CPUs
+        </p>
+        <p><b>₹ 39,999</b></p>
+        <div class="color">
+          <li><button class="blue" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLUE</button></li>
+          <li><button class="black" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLACK</button></li>
+          <li><button class="red" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">RED</button></li>
+        </div>
+      </div>
+      <div id="card">
+        <img
+          src="https://m.media-amazon.com/images/I/71PGvPXpk5L._SL1500_.jpg"
+        />
+        <h3>PlayStation 4</h3>
+        <p>
+          Nest generation PlayStation from Sony with older generation Intel CPUs
+        </p>
+
+        <p><b>₹ 29,999</b></p>
+        <div class="color">
+          <li><button class="gold" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">YELLOW</button></li>
+          <li><button class="black" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLACK</button></li>
+          <li><button class="red" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">RED</button></li>
+        </div>
+      </div>
+      <div id="card">
+        <img
+          src="https://media.wired.com/photos/59fb66aeb6642a6f52a4f2ec/master/w_2560%2Cc_limit/xboxone-TA.jpg"
+        />
+        <h3>X-Box One</h3>
+        <p>Current generation X-Box from Microsoft with latest AMD Zen CPUs</p>
+        <p><b>₹ 35,999</b></p>
+        <div class="color">
+          <li><button class="blue" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLUE</button></li>
+          <li><button class="black" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLACK</button></li>
+          <li><button class="green" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">GREEN</button></li>
+        </div>
+      </div>
+      <div id="card">
+        <img
+          src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202206?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653493200207"
+        />
+        <h3>MacBook Pro</h3>
+        <p>Mi powered MacBooks for professionals</p>
+        <p><b>₹ 69,999</b></p>
+        <div class="color">
+          <li><button class="blue" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLUE</button></li>
+          <li><button class="gold" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">YELLOW</button></li>
+          <li><button class="red" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">RED</button></li>
+        </div>
+      </div>
+      <div id="card">
+        <img
+          src="https://cdn.vox-cdn.com/thumbor/7eAF8ZXLc6rkH_Pr78X_iLDhT0k=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21957142/Apple_iphone12pro_back_camera_10132020.jpg"
+        />
+        <h3>IPhone 12</h3>
+        <p>A13 bionic based 5g ready smartphones from Apple</p>
+        <p><b>₹ 65,999</b></p>
+        <div class="color">
+          <li><button class="red" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">RED</button></li>
+          <li><button class="gold" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">YELLOW</button></li>
+          <li><button class="blue" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLUE</button></li>
+        </div>
+      </div>
+      <div id="card">
+        <img
+          src="https://www.isthemessage.net/wp-content/uploads/2020/10/iPhone-SE-3-leaked-1024x659.jpg"
+        />
+        <h3>IPhone SE</h3>
+        <p>The same A13 bionic in smaller form factor</p>
+        <p><b>₹ 45,999</b></p>
+        <div class="color">
+          <li><button class="red" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">RED</button></li>
+          <li><button class="gold" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">YELLOW</button></li>
+          <li><button class="blue" onclick="change(this)" onmouseover="changebg1(this)" onmouseleave="changebg2(this)">BLUE</button></li>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const button = document.getElementsByTagName("Button");
+    const card = document.getElementById("card");
+    for (let i = 0; i < button.length; i++) {
+      button[i].style.color = button[i].getAttribute("class");
+      button[i].style.border = `2px solid ${button[i].getAttribute("class")}`;
+    }
+    function change(e) {
+      e.parentElement.parentElement.parentElement.style.background =
+        e.getAttribute("class");
+      e.parentElement.parentElement.parentElement.style.color = "white";
+      e.parentElement.parentElement.parentElement.style.hover.background =
+        e.getAttribute("class");
+    }
+    function changebg1(e) {
+        e.style.background = e.getAttribute("class");
+         e.style.color="#fff";
+    }
+    function changebg2(e) {
+        e.style.background ="none";
+        e.style.color=e.getAttribute("class");
+    }
+  </script>
+</html>
